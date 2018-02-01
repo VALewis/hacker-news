@@ -7,18 +7,27 @@ html
 
 		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous")
 			
-		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
-		
-		//- style(type='text/css')
-		//- 	include ../public/css/index.css
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+
+		style(type='text/css')
+			include ../public/index.css
 
 	body
 		div(class='dropdown')
 			h2 Click and see the top 10 most used words
-			ul
-				//- li of the last 25 stories
+			button(class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown") of the last 25 stories
+			ul(class="dropdown-menu")
+				li(id='last25')
 				//- 	each word in top25Array
 				//- 		p #{word.name}
-				li of last week
+			
+			button(class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown") of last week
+			ul(class="dropdown-menu")
+				li(id='lastweek')
 					each word in topWeekArray
 						p #{word.name}
+
+			p Click to refresh the page
+			input(type="button" class="btn btn-info" value="Refresh Page" onClick="window.location.reload()")
+

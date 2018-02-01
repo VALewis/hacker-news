@@ -1,0 +1,11 @@
+body {
+	background-color: black;
+	color: orange;
+	text-align: center;
+	width: 0 auto;
+}
+.info {
+	width: 40%;
+	display: block;
+	text-align: center;
+}

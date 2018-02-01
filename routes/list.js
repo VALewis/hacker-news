@@ -1,7 +1,6 @@
 // route with dropdown and list
 var hn = require('hacker-news-api');
 var sw = require('stopword');
-// var Promise = require('promise');
 
 module.exports = (app) => {
 	app.get('/list', (req, res) => {
@@ -40,7 +39,8 @@ module.exports = (app) => {
 				return b.total - a.total;
 			});
 			return finalWordsArray;
-		};	
+		};
+		//Search for last 25 stories
 		hn.story().search().hitsPerPage(25).recent(function (error, data) {
 			if (error) throw error;
 			let hits25 = []
@@ -56,13 +56,12 @@ module.exports = (app) => {
 			let finalWordsArray = wordSorting(wordsMap);
 
 			let top25Array = finalWordsArray.slice(0, 10)
-			
+			return top25Array
 			// console.log('25 wordsArray2', wordsArray2)
 			// console.log('25 wordsMap', wordsMap)
 			// console.log('25 finalWordsArray', finalWordsArray);
 			// console.log('25 top25Array', top25Array)
-			return top25Array
-		});
+		}); 
 		// Search for week ago
 		hn.story().search().hitsPerPage(100).before('past_week', function (error, data) {
 			if (error) throw error;

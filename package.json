@@ -17,7 +17,6 @@
     "dotenv": "^5.0.0",
     "express": "^4.16.2",
     "hacker-news-api": "^2.0.0",
-    "promise": "^8.0.1",
     "stopword": "^0.1.9"
   }
 }
