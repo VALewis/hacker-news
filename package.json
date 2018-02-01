@@ -1,0 +1,23 @@
+{
+  "name": "oneplanetcrowd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "oneplanetcrowd"
+  },
+  "author": "valerie lewis",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "dotenv": "^5.0.0",
+    "express": "^4.16.2",
+    "hacker-news-api": "^2.0.0",
+    "promise": "^8.0.1",
+    "stopword": "^0.1.9"
+  }
+}
